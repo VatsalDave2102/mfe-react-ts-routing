@@ -1,0 +1,9 @@
+{
+	"name": "cart",
+	"exposes": {
+		"./cart": "./src/cart.ts",
+		"./Login": "./src/Login.tsx",
+		"./AddToCart": "./src/AddToCart.tsx",
+		"./MiniCart": "./src/MiniCart.tsx"
+	}
+}
