@@ -24,7 +24,9 @@
 	},
 	"include": [
 		"src/**/*", // *** The files TypeScript should type check ***
-		"../shared-types/cart/index.d.ts"
+		"../shared-types/cart/index.d.ts",
+		"../shared-types/pdp/index.d.ts",
+		"../shared-types/home/index.d.ts"
 	],
 	"exclude": ["node_modules", "build", "dist"]
 }

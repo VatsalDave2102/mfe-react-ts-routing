@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getProductById, currency } from "home/products";
 import { Product } from "home/types";
 import AddToCart from "cart/AddToCart";
+import "tailwindcss/tailwind.css";
 
 const PDPContent = () => {
 	const { id } = useParams();

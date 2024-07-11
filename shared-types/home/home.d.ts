@@ -27,3 +27,16 @@ declare module "home/products" {
     export const getProductById: (id: string) => Promise<Product>;
     export const currency: Intl.NumberFormat;
 }
+declare module "home/HomeContent" {
+    import React from "react";
+    import "tailwindcss/tailwind.css";
+    const HomeContent: () => React.JSX.Element;
+    export default HomeContent;
+}
+declare module "home/MainLayout" {
+    import React from "react";
+    import "remixicon/fonts/remixicon.css";
+    import "./index.scss";
+    const MainLayout: () => React.JSX.Element;
+    export default MainLayout;
+}

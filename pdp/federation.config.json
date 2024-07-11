@@ -1,0 +1,6 @@
+{
+	"name": "pdp",
+	"exposes": {
+		"./PDPContent": "./src/PDPContent.tsx"
+	}
+}

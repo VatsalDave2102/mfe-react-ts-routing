@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { cart, clearCart, CartItem } from "cart/cart";
 import { currency } from "home/products";
+import "tailwindcss/tailwind.css";
 
 const CartContent = () => {
 	const [items, setItems] = useState<CartItem[]>([]);

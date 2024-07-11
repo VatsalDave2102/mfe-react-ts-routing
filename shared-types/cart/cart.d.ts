@@ -34,3 +34,8 @@ declare module "cart/MiniCart" {
     const MiniCart: () => React.JSX.Element;
     export default MiniCart;
 }
+declare module "cart/CartContent" {
+    import React from "react";
+    const CartContent: () => React.JSX.Element;
+    export default CartContent;
+}

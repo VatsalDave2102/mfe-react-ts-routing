@@ -1,21 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "home/Header";
-import Footer from "home/Footer";
 import "remixicon/fonts/remixicon.css";
-import "./index.scss";
-import CartContent from "./CartContent";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const App = () => (
-	<div className="text-3xl mx-auto max-w-6xl">
-		<Header />
-		<CartContent />
-		<Footer />
-	</div>
-);
+import "./index.scss";
+
+import CartContent from "cart/CartContent";
+import MainLayout from "home/MainLayout";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <MainLayout />,
+		children: [
+			{
+				path: "/",
+				element: <CartContent />,
+			},
+			{
+				path: "/cart",
+				element: <CartContent />,
+			},
+		],
+	},
+]);
+
 const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Failed to find the root element");
 
 const root = ReactDOM.createRoot(rootElement as HTMLElement);
 
-root.render(<App />);
+root.render(<RouterProvider router={router} />);

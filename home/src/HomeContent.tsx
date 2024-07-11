@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { currency, getProducts } from "./products";
 import { Product } from "./types";
+import { Link } from "react-router-dom";
 import { addToCart, useLoggedIn } from "cart/cart";
+import "tailwindcss/tailwind.css";
 
 const HomeContent = () => {
 	const loggedIn = useLoggedIn();
@@ -14,12 +16,14 @@ const HomeContent = () => {
 		<div className="grid grid-cols-4 gap-5">
 			{products?.map((product) => (
 				<div key={product.id}>
-					<img src={product.image} alt={product.name} />
+					<Link to={`/products/${product.id}`}>
+						<img src={product.image} alt={product.name} />
+					</Link>
 					<div className="flex">
 						<div className="flex-grow font-bold">
-							<a href="" className="text-2xl">
+							<Link to={`/products/${product.id}`} className="text-2xl">
 								{product.name}
-							</a>
+							</Link>
 						</div>
 						<div className="flex-end">{currency.format(product.price)}</div>
 					</div>

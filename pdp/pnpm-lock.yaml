@@ -11,6 +11,9 @@ importers:
       '@babel/runtime':
         specifier: ^7.24.7
         version: 7.24.7
+      '@pixability-ui/federated-types':
+        specifier: ^0.2.0
+        version: 0.2.0(typescript@4.9.5)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -774,6 +777,12 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@pixability-ui/federated-types@0.2.0':
+    resolution: {integrity: sha512-IdxYNvqvk0vnQ6wqYkVV7dYfWAfxW16VJKot9XoqKoJNrnlHXPZAzZR0lwGcUSCm++MJ9Qho6FwzqX1XFz7V5g==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^4.0.5
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -3574,6 +3583,10 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
+
+  '@pixability-ui/federated-types@0.2.0(typescript@4.9.5)':
+    dependencies:
+      typescript: 4.9.5
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
