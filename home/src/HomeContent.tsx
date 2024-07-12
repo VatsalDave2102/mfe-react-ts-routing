@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { currency, getProducts } from "./products";
-import { Product } from "./types";
-import { Link } from "react-router-dom";
-import { addToCart, useLoggedIn } from "cart/cart";
 import "tailwindcss/tailwind.css";
+import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+
+import { Product } from "./types";
+import { currency, getProducts } from "./products";
+
+import { addToCart, useLoggedIn } from "cart/cart";
 
 const HomeContent = () => {
 	const loggedIn = useLoggedIn();
